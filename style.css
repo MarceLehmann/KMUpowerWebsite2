@@ -756,18 +756,12 @@ select.form-control {
   --container-xl: 1280px;
 
   /* KMUpower brand colors - Override design system */
-  --color-brand-primary: #48e0d1;
-  --color-brand-primary-hover: #3dccc0;
-  --color-brand-primary-active: #32b8af;
+  --color-brand-primary: var(--color-primary);
+  --color-brand-primary-hover: var(--color-primary-hover);
+  --color-brand-primary-active: var(--color-primary-active);
   --color-brand-accent: #FF6B35;
-  --color-brand-neutral: #F8F9FA;
-  --color-brand-text: #333333;
-  
-  /* Override primary colors with brand colors */
-  --color-primary: #48e0d1;
-  --color-primary-hover: #3dccc0;
-  --color-primary-active: #32b8af;
-  --color-focus-ring: rgba(72, 224, 209, 0.4);
+  --color-brand-neutral: var(--color-background);
+  --color-brand-text: var(--color-text);
 }
 
 /* Dark mode colors */
@@ -798,11 +792,13 @@ select.form-control {
     --color-border-secondary: rgba(119, 124, 124, 0.2);
     --color-select-caret: rgba(245, 245, 245, 0.8);
 
-    /* RGB versions for dark mode */
-    --color-success-rgb: 72, 224, 209;
-    --color-brand-primary: #48e0d1;
-    --color-brand-primary-hover: #3dccc0;
-    --color-brand-primary-active: #32b8af;
+    /* Brand colors for dark mode */
+    --color-brand-primary: var(--color-primary);
+    --color-brand-primary-hover: var(--color-primary-hover);
+    --color-brand-primary-active: var(--color-primary-active);
+    --color-brand-accent: #FF6B35;
+    --color-brand-neutral: var(--color-background);
+    --color-brand-text: var(--color-text);
   }
 }
 
@@ -832,11 +828,13 @@ select.form-control {
   --color-border-secondary: rgba(119, 124, 124, 0.2);
   --color-select-caret: rgba(245, 245, 245, 0.8);
 
-  /* RGB versions for dark mode */
-  --color-success-rgb: 72, 224, 209;
-  --color-brand-primary: #48e0d1;
-  --color-brand-primary-hover: #3dccc0;
-  --color-brand-primary-active: #32b8af;
+  /* Brand colors for dark mode */
+  --color-brand-primary: var(--color-primary);
+  --color-brand-primary-hover: var(--color-primary-hover);
+  --color-brand-primary-active: var(--color-primary-active);
+  --color-brand-accent: #FF6B35;
+  --color-brand-neutral: var(--color-background);
+  --color-brand-text: var(--color-text);
 }
 
 [data-color-scheme="light"] {
@@ -860,14 +858,16 @@ select.form-control {
   --color-info: rgba(98, 108, 113, 1);
   --color-focus-ring: rgba(72, 224, 209, 0.4);
 
-  /* RGB versions for light mode */
-  --color-success-rgb: 72, 224, 209;
-  --color-brand-primary: #48e0d1;
-  --color-brand-primary-hover: #3dccc0;
-  --color-brand-primary-active: #32b8af;
+  /* Brand colors for light mode */
+  --color-brand-primary: var(--color-primary);
+  --color-brand-primary-hover: var(--color-primary-hover);
+  --color-brand-primary-active: var(--color-primary-active);
+  --color-brand-accent: #FF6B35;
+  --color-brand-neutral: var(--color-background);
+  --color-brand-text: var(--color-text);
 }
 
-/* Base styles */
+/* KMUpower specific styles */
 html {
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
