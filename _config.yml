@@ -1,0 +1,21 @@
+title: KMUpower Blog
+email: marcel@kmupower.ch
+description: >-
+  Aktuelle Beiträge, Tipps und Praxisbeispiele rund um Digitalisierung, Power Apps, Power Automate und KI für KMU im DACH-Raum.
+baseurl: ""
+url: "https://www.kmupower.ch"
+language: de
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO defaults
+keywords: [Power Apps, Power Automate, Digitalisierung, KMU, KI, Low-Code, Schweiz]
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/

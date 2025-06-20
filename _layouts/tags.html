@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Alle Tags | {{ site.title }}</title>
+  {% seo %}
+</head>
+<body>
+  <h1>Alle Tags</h1>
+  <ul>
+    {% for tag in site.tags %}
+      <li><a href="/blog/tag/{{ tag[0] }}">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
