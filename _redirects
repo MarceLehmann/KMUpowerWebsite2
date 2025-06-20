@@ -1,0 +1,21 @@
+# Netlify Clean URLs - entfernt .html Endungen automatisch
+# Für alle HTML-Seiten
+
+/home              /index.html           200
+/ueber-uns         /about.html           200  
+/suite             /suite.html           200
+/preise            /pricing.html         200
+/partner           /partners.html        200
+/case-studies      /case-studies.html    200
+/kontakt           /contact.html         200
+
+# Blog URLs bleiben wie sie sind (Jekyll managed)
+/blog/*            /blog/:splat          200
+
+# Fallback für .html Endungen - redirect zu clean URLs
+/about.html        /ueber-uns            301!
+/suite.html        /suite                301!
+/pricing.html      /preise               301!
+/partners.html     /partner              301!
+/case-studies.html /case-studies         301!
+/contact.html      /kontakt              301!

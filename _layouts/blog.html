@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">{{ page.title | default: "KMUpower Blog" }}</h1>
+            <p class="hero__subtitle">{{ page.description | default: "Aktuelle Beiträge, Tipps und Praxisbeispiele rund um Digitalisierung, Power Platform, Power Apps, Power Automate und KI für KMU im DACH-Raum." }}</p>
+            <div class="hero__stats">
+                <div class="stat">
+                    <span class="stat__number">50+</span>
+                    <span class="stat__label">Praktische Tipps</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">MVP</span>
+                    <span class="stat__label">Microsoft Expertise</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">DACH</span>
+                    <span class="stat__label">Regionaler Fokus</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="section">
+    <div class="container">
+        {{ content }}
+        
+        {% if page.layout == 'blog' %}
+        <!-- Blog Posts -->
+        <div class="section__header">
+            <h2 class="section__title">Neueste Beiträge</h2>
+            <p class="section__subtitle">Praxisnahe Tipps und Insights zur Digitalisierung</p>
+        </div>
+        
+        <div class="grid grid--2">
+            {% for post in site.posts limit: 6 %}
+            <article class="card">
+                <div class="card__content">
+                    <div class="card__meta">
+                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d. %B %Y' }}</time>
+                        {% if post.tags %}
+                        <div class="card__tags">
+                            {% for tag in post.tags %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="btn btn--outline btn--sm">Weiterlesen</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        {% if site.posts.size == 0 %}
+        <div class="card text-center">
+            <div class="card__content">
+                <h3>Bald geht's los!</h3>
+                <p>Wir arbeiten gerade an spannenden Inhalten für Sie. Bleiben Sie dran für praktische Tipps und Insights zur Power Platform Digitalisierung.</p>
+                <a href="{{ '/contact.html' | relative_url }}" class="btn btn--primary">Newsletter abonnieren</a>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="section section--bg">
+    <div class="container text-center">
+        <h2 class="section__title">Bleiben Sie informiert</h2>
+        <p class="section__subtitle">Erhalten Sie regelmäßig praktische Tipps und Updates zur Power Platform Digitalisierung.</p>
+        <div class="d-flex justify-content-center gap-3" style="margin-top: 2rem;">
+            <a href="{{ '/contact.html' | relative_url }}" class="btn btn--primary btn--lg">Newsletter abonnieren</a>
+            <a href="{{ '/case-studies.html' | relative_url }}" class="btn btn--outline btn--lg">Erfolgsgeschichten</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    {% seo %}
+    {% feed_meta %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar__brand">
+                <h2><a href="{{ '/' | relative_url }}" style="color: inherit; text-decoration: none;">KMUpower</a></h2>
+            </div>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="{{ '/' | relative_url }}" class="navbar__link">Home</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}" class="navbar__link">Über uns</a></li>
+                <li><a href="{{ '/suite.html' | relative_url }}" class="navbar__link">KMU Power Suite</a></li>
+                <li><a href="{{ '/pricing.html' | relative_url }}" class="navbar__link">Preise</a></li>
+                <li><a href="{{ '/partners.html' | relative_url }}" class="navbar__link">Partner</a></li>
+                <li><a href="{{ '/case-studies.html' | relative_url }}" class="navbar__link">Case Studies</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}" class="navbar__link{% if page.layout == 'blog' or page.layout == 'post' %} active{% endif %}">Blog</a></li>
+                <li><a href="{{ '/contact.html' | relative_url }}" class="navbar__link">Kontakt</a></li>
+            </ul>
+            <button class="navbar__toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>KMUpower</h3>
+                    <p>Ihr Digitalisierungspartner im DACH-Raum. Wir ermächtigen KMUs durch Microsoft Power Platform Expertise.</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{{ '/suite.html' | relative_url }}">KMU Power Suite</a></li>
+                        <li><a href="{{ '/pricing.html' | relative_url }}">Preismodelle</a></li>
+                        <li><a href="{{ '/partners.html' | relative_url }}">Partner werden</a></li>
+                        <li><a href="{{ '/contact.html' | relative_url }}">Beratung</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="{{ '/about.html' | relative_url }}">Über uns</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                        <li><a href="{{ '/contact.html' | relative_url }}">Kontakt</a></li>
+                        <li>Datenschutz</li>
+                        <li>Impressum</li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li>marcel@kmupower.ch</li>
+                        <li>Zug, Schweiz</li>
+                        <li>DACH-Region Service</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 KMUpower. Alle Rechte vorbehalten. Microsoft MVP für Business Applications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/app.js' | relative_url }}"></script>
+</body>
+</html>

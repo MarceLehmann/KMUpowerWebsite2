@@ -1,11 +1,6 @@
 ---
 layout: tags
-title: "Alle Tags"
+title: "Blog Tags – KMUpower"
+description: "Alle Tags und Kategorien des KMUpower Blogs. Finden Sie Artikel zu Power Platform, Digitalisierung, Power Apps, Power Automate und KI für KMUs."
 permalink: /blog/tags/
 ---
-
-# Alle Tags
-
-{% for tag in site.tags %}
-- [{{ tag[0] }}](/blog/tag/{{ tag[0] }}) ({{ tag[1].size }})
-{% endfor %}

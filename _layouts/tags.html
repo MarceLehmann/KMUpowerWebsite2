@@ -1,16 +1,57 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Alle Tags | {{ site.title }}</title>
-  {% seo %}
-</head>
-<body>
-  <h1>Alle Tags</h1>
-  <ul>
-    {% for tag in site.tags %}
-      <li><a href="/blog/tag/{{ tag[0] }}">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
-    {% endfor %}
-  </ul>
-</body>
-</html>
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">Blog Tags</h1>
+            <p class="hero__subtitle">Finden Sie Artikel zu spezifischen Themen und Technologien</p>
+        </div>
+    </div>
+</section>
+
+<!-- Tags Cloud -->
+<section class="section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">Alle Tags</h2>
+            <p class="section__subtitle">Klicken Sie auf einen Tag, um verwandte Artikel zu finden</p>
+        </div>
+        
+        <div class="tags-cloud" style="text-align: center; margin: 2rem 0;">
+            {% assign tags = site.tags | sort %}
+            {% for tag in tags %}
+            <a href="#{{ tag[0] }}" class="tag" style="font-size: {{ tag[1].size | times: 0.1 | plus: 1 }}rem;">
+                {{ tag[0] }} ({{ tag[1].size }})
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Tag Sections -->
+<section class="section section--bg">
+    <div class="container">
+        {% for tag in site.tags %}
+        <div class="tag-section" id="{{ tag[0] }}" style="margin-bottom: 3rem;">
+            <h3 class="section__title">{{ tag[0] }}</h3>
+            <div class="grid grid--2">
+                {% for post in tag[1] %}
+                <article class="card">
+                    <div class="card__content">
+                        <div class="card__meta">
+                            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d. %B %Y' }}</time>
+                        </div>
+                        <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                        <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="btn btn--outline btn--sm">Weiterlesen</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

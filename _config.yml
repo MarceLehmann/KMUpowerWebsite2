@@ -5,11 +5,15 @@ description: >-
 baseurl: ""
 url: "https://www.kmupower.ch"
 language: de
-theme: minima
+
+# Clean URLs für GitHub Pages
+permalink: pretty
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # SEO defaults
 keywords: [Power Apps, Power Automate, Digitalisierung, KMU, KI, Low-Code, Schweiz]
@@ -19,3 +23,11 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
+
+# Defaults für Clean URLs
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
