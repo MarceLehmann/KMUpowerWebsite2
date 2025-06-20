@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Kostenloses Analysegespräch | KMUpower</title>
     <meta name="description" content="Kontaktieren Sie Marcel Lehmann für ein kostenloses Analysegespräch. Microsoft MVP für Business Applications im DACH-Raum. 24h Reaktionszeit garantiert.">
-    <link rel="stylesheet" href="style_fixed.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -20,6 +20,7 @@
                 <li><a href="suite.html" class="navbar__link">KMU Power Suite</a></li>
                 <li><a href="pricing.html" class="navbar__link">Preise</a></li>
                 <li><a href="partners.html" class="navbar__link">Partner</a></li>
+                <li><a href="case-studies.html" class="navbar__link">Case Studies</a></li>
                 <li><a href="contact.html" class="navbar__link active">Kontakt</a></li>
             </ul>
             <button class="navbar__toggle" id="navbar-toggle">
@@ -30,13 +31,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Contact Hero Section -->
+    <section class="hero hero--contact">
         <div class="container">
             <div class="hero__content">
-                <h1 class="hero__title">Jetzt kostenlose Beratung anfragen</h1>
-                <p class="hero__subtitle">Lassen Sie uns gemeinsam Ihre Digitalisierung vorantreiben<br>
-                Kostenloser Digitaler Reifegradscheck und ROI-Berechnung</p>
+                <h1 class="hero__title">Kostenlose Digitalisierungsberatung</h1>
+                <p class="hero__subtitle">Lassen Sie uns gemeinsam Ihre digitale Transformation planen. Kostenloses Erstgespräch mit ROI-Analyse und Roadmap-Entwicklung.</p>
                 <div class="hero__stats">
                     <div class="stat">
                         <span class="stat__number">24h</span>
@@ -55,99 +55,259 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="section">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
-            <div class="grid grid--2">
-                <!-- Contact Information -->
-                <div class="card">
-                    <h3>Marcel Lehmann</h3>
-                    <p style="color: #48e0d1; font-weight: 600; margin-bottom: 1rem;">Microsoft MVP für Business Applications</p>
-                    <div style="margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#48e0d1" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span>Zug, Schweiz</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#48e0d1" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <span>marcel@kmupower.ch</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#48e0d1" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12,6 12,12 16,14"/>
-                            </svg>
-                            <span>Mo-Fr: 8-18 Uhr</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#48e0d1" stroke-width="2">
-                                <path d="M9 11H1v3h8v3l7-7-7-7v3z"/>
-                            </svg>
-                            <span>24h Reaktionszeit</span>
-                        </div>
-                    </div>
-
-                    <h4>Serviceregionen</h4>
-                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                        <li style="margin-bottom: 0.5rem;">🇨🇭 <strong>Schweiz:</strong> Direkter Service in Zürich, Bern, Basel</li>
-                        <li style="margin-bottom: 0.5rem;">🇩🇪 <strong>Deutschland:</strong> Partnernetzwerk in Süddeutschland</li>
-                        <li style="margin-bottom: 0.5rem;">🇦🇹 <strong>Österreich:</strong> Remote-Service mit Fokus auf Wien</li>
-                    </ul>
-                </div>
-
+            <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="card">
-                    <h3>Kontaktformular</h3>
-                    <form id="contact-form">
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h2>Jetzt Beratungstermin vereinbaren</h2>
+                        <p>Füllen Sie das Formular aus und ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Vorname *</label>
+                                <input type="text" class="form-control" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nachname *</label>
+                                <input type="text" class="form-control" name="lastname" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">E-Mail *</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Telefon</label>
+                                <input type="tel" class="form-control" name="phone">
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
-                            <label class="form-label">Firma *</label>
+                            <label class="form-label">Unternehmen *</label>
                             <input type="text" class="form-control" name="company" required>
                         </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Name *</label>
-                            <input type="text" class="form-control" name="name" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Branche</label>
+                                <select class="form-control" name="industry">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="manufacturing">Produktion/Fertigung</option>
+                                    <option value="construction">Bau/Handwerk</option>
+                                    <option value="retail">Handel/Einzelhandel</option>
+                                    <option value="services">Dienstleistungen</option>
+                                    <option value="healthcare">Gesundheitswesen</option>
+                                    <option value="finance">Finanzdienstleistungen</option>
+                                    <option value="other">Sonstige</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Mitarbeiterzahl</label>
+                                <select class="form-control" name="employees">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="1-9">1-9 Mitarbeiter</option>
+                                    <option value="10-24">10-24 Mitarbeiter</option>
+                                    <option value="25-49">25-49 Mitarbeiter</option>
+                                    <option value="50-99">50-99 Mitarbeiter</option>
+                                    <option value="100-249">100-249 Mitarbeiter</option>
+                                    <option value="250+">250+ Mitarbeiter</option>
+                                </select>
+                            </div>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label class="form-label">E-Mail *</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <label class="form-label">Interessensbereich</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests[]" value="power-apps">
+                                    <span class="checkmark"></span>
+                                    Power Apps Entwicklung
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests[]" value="power-automate">
+                                    <span class="checkmark"></span>
+                                    Prozessautomatisierung
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests[]" value="ki-integration">
+                                    <span class="checkmark"></span>
+                                    KI-Integration
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests[]" value="digitalisierung">
+                                    <span class="checkmark"></span>
+                                    Digitalisierungsstrategie
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests[]" value="support">
+                                    <span class="checkmark"></span>
+                                    Support & Wartung
+                                </label>
+                            </div>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label class="form-label">Telefon</label>
-                            <input type="tel" class="form-control" name="phone">
+                            <label class="form-label">Beschreiben Sie Ihre Herausforderung</label>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Erzählen Sie uns von Ihren aktuellen Prozessen und wo Sie Verbesserungspotential sehen..."></textarea>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label class="form-label">Anzahl Mitarbeiter</label>
-                            <select class="form-control" name="employees">
-                                <option value="">Bitte wählen</option>
-                                <option value="1-9">1-9 Mitarbeiter</option>
-                                <option value="10-24">10-24 Mitarbeiter</option>
-                                <option value="25-49">25-49 Mitarbeiter</option>
-                                <option value="50-99">50-99 Mitarbeiter</option>
-                                <option value="100-249">100-249 Mitarbeiter</option>
-                                <option value="250+">250+ Mitarbeiter</option>
-                            </select>
+                            <label class="checkbox-label checkbox-label--privacy">
+                                <input type="checkbox" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Ich stimme der Datenschutzerklärung zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert werden. *
+                            </label>
                         </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full-width btn--lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Kostenlose Beratung anfragen
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-person">
+                            <div class="contact-person__avatar">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div class="contact-person__info">
+                                <h3>Marcel Lehmann</h3>
+                                <p class="contact-person__title">Microsoft MVP für Business Applications</p>
+                                <p class="contact-person__expertise">Power Platform Spezialist & Digitalisierungsexperte</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="contact-detail__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-detail__content">
+                                    <strong>Standort</strong>
+                                    <p>Zug, Schweiz</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <div class="contact-detail__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-detail__content">
+                                    <strong>E-Mail</strong>
+                                    <p>marcel@kmupower.ch</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <div class="contact-detail__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-detail__content">
+                                    <strong>Verfügbarkeit</strong>
+                                    <p>Mo-Fr: 8:00-18:00 Uhr</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <div class="contact-detail__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-detail__content">
+                                    <strong>Reaktionszeit</strong>
+                                    <p>Binnen 24 Stunden garantiert</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-regions">
+                        <h4>Serviceregionen</h4>
+                        <div class="region-list">
+                            <div class="region">
+                                <span class="region__flag">🇨🇭</span>
+                                <div class="region__info">
+                                    <strong>Schweiz</strong>
+                                    <p>Direkter Service in Zürich, Bern, Basel</p>
+                                </div>
+                            </div>
+                            <div class="region">
+                                <span class="region__flag">🇩🇪</span>
+                                <div class="region__info">
+                                    <strong>Deutschland</strong>
+                                    <p>Partnernetzwerk in Süddeutschland</p>
+                                </div>
+                            </div>
+                            <div class="region">
+                                <span class="region__flag">🇦🇹</span>
+                                <div class="region__info">
+                                    <strong>Österreich</strong>
+                                    <p>Remote-Service mit Fokus auf Wien</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="form-group">
-                            <label class="form-label">Interesse an</label>
-                            <select class="form-control" name="interest">
-                                <option value="">Bitte wählen</option>
-                                <option value="beratung">Digitalisierungsberatung</option>
-                                <option value="suite">KMU Power Suite</option>
-                                <option value="custom">Individuelle Lösung</option>
-                                <option value="support">Support & Managed Services</option>
-                                <option value="partner">Partner werden</option>
-                                <option value="schulung">Schulungen</option>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Häufige Fragen</h2>
+                <p>Antworten auf die wichtigsten Fragen rund um die Beratung</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Wie läuft das Erstgespräch ab?</h4>
+                    <p>Das Erstgespräch dauert ca. 45-60 Minuten und findet online oder vor Ort statt. Wir analysieren Ihre aktuellen Prozesse und identifizieren Digitalisierungspotentiale.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Welche Unterlagen sollte ich vorbereiten?</h4>
+                    <p>Bringen Sie gerne Prozessbeschreibungen, aktuelle Tools und konkrete Schmerzpunkte mit. Je mehr Sie uns zeigen, desto gezielter können wir beraten.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Entstehen Kosten für die Beratung?</h4>
+                    <p>Das Erstgespräch inklusive ROI-Analyse ist komplett kostenfrei und unverbindlich. Sie erhalten konkrete Handlungsempfehlungen.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Wie schnell kann es losgehen?</h4>
+                    <p>Nach der Beratung können wir je nach Projektumfang innerhalb von 1-2 Wochen mit der Umsetzung beginnen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
                             </select>
                         </div>
 
