@@ -1,0 +1,296 @@
+# Erstelle about.html und contact.html
+
+about_html = """<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - Marcel Lehmann Microsoft MVP | KMUpower</title>
+    <meta name="description" content="Marcel Lehmann ist Microsoft MVP für Business Applications und Ihr Digitalisierungsexperte für KMUs im DACH-Raum. Expertise in Power Platform seit 2020.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar__brand">
+                <h2>KMUpower</h2>
+            </div>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link active">Über uns</a></li>
+                <li><a href="suite.html" class="navbar__link">KMU Power Suite</a></li>
+                <li><a href="pricing.html" class="navbar__link">Preise</a></li>
+                <li><a href="partners.html" class="navbar__link">Partner</a></li>
+                <li><a href="contact.html" class="navbar__link">Kontakt</a></li>
+            </ul>
+            <button class="navbar__toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Marcel Lehmann</h1>
+                <p class="hero__subtitle">Microsoft MVP für Business Applications<br>
+                Ihr Digitalisierungsexperte für KMUs im DACH-Raum</p>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">5+</span>
+                        <span class="stat__label">Jahre Power Platform</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">MVP</span>
+                        <span class="stat__label">Microsoft Status</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">50+</span>
+                        <span class="stat__label">Erfolgreiche Projekte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid--2">
+                <div class="card">
+                    <h3>Unsere Mission</h3>
+                    <p>Wir ermächtigen kleine und mittelständische Unternehmen durch digitale Exzellenz. KMUpower macht fortschrittliche Digitalisierungslösungen für KMUs zugänglich, nutzbar und wirtschaftlich – und verwandelt damit technologische Komplexität in geschäftlichen Mehrwert.</p>
+                </div>
+                <div class="card">
+                    <h3>Unsere Vision</h3>
+                    <p>Die führende Kraft für intelligente Digitalisierung im DACH-KMU-Sektor sein. Wir gestalten eine Zukunft, in der jedes KMU über die digitalen Werkzeuge verfügt, um global wettbewerbsfähig zu bleiben.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Marcel -->
+    <section class="section section--bg">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Marcel Lehmann - Ihr Digitalisierungsexperte</h2>
+                <p class="section__subtitle">Microsoft MVP mit tiefgreifender KMU-Erfahrung</p>
+            </div>
+            <div class="grid grid--2">
+                <div class="card">
+                    <h4>Qualifikationen & Expertise</h4>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li><strong>Microsoft MVP für Business Applications</strong></li>
+                        <li>Power Platform Spezialist seit 2020</li>
+                        <li>Zertifizierter Microsoft Trainer</li>
+                        <li>Hauptberuflich bei Implenia AG tätig</li>
+                        <li>Wöchentliche #PowerPlatformTips</li>
+                        <li>Aktiv in der Microsoft Community</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Besondere Stärken</h4>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Canvas Apps & Model-driven Apps</li>
+                        <li>Power Automate Cloud & Desktop Flows</li>
+                        <li>SharePoint & Microsoft 365 Integration</li>
+                        <li>Dataverse Architektur</li>
+                        <li>AI Builder & Copilot Integration</li>
+                        <li>KMU-spezifische Lösungsansätze</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-style: italic; color: #666;">
+                    "Als erfahrener Digitalisierungsexperte und Microsoft MVP bringe ich tiefgreifendes technisches Know-how mit praktischem Verständnis für KMU-Anforderungen zusammen. Bei Implenia AG tätig und Gründer von KMUpower, teile ich mein Wissen durch wöchentliche #PowerPlatformTips und unterstütze KMUs auf ihrem Weg zur digitalen Exzellenz."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Values -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Unsere Kernwerte</h2>
+                <p class="section__subtitle">Diese Prinzipien leiten unser tägliches Handeln</p>
+            </div>
+            <div class="grid grid--3">
+                <div class="card">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h4>Expertise mit Bodenständigkeit</h4>
+                    <p>Tiefgreifendes technisches Know-how, verständlich und praxisorientiert kommuniziert.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h4>Wertorientierung</h4>
+                    <p>Jede Lösung muss messbaren Geschäftswert liefern. ROI steht im Mittelpunkt.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h4>Pragmatischer Fortschritt</h4>
+                    <p>Realistische, schnell umsetzbare Lösungen für nachhaltige Ergebnisse.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h4>Durchgängige Exzellenz</h4>
+                    <p>Von der ersten Beratung bis zur Implementierung - höchste Qualität in jeder Phase.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>Partnerschaftliche Zusammenarbeit</h4>
+                    <p>Langfristiger Digitalisierungspartner, nicht nur einmaliger Dienstleister.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DACH Focus -->
+    <section class="section section--bg">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">DACH-Region im Fokus</h2>
+                <p class="section__subtitle">Regionale Expertise für lokale Herausforderungen</p>
+            </div>
+            <div class="grid grid--3">
+                <div class="card">
+                    <h4>🇨🇭 Schweiz</h4>
+                    <p><strong>Direkter Service:</strong> Zürich, Bern, Basel</p>
+                    <p>Persönliche Präsenz, lokale Netzwerke und Partner. Schwerpunktregionen mit vor-Ort Terminen.</p>
+                </div>
+                <div class="card">
+                    <h4>🇩🇪 Deutschland</h4>
+                    <p><strong>Partnerschaftsmodell:</strong> Süddeutschland</p>
+                    <p>Kooperation mit lokalen IT-Dienstleistern, Fokus auf Baden-Württemberg und Bayern. Remote-Betreuung mit quartalsweisen Vor-Ort-Terminen.</p>
+                </div>
+                <div class="card">
+                    <h4>🇦🇹 Österreich</h4>
+                    <p><strong>Remote-First:</strong> Wien und Umgebung</p>
+                    <p>Remote-First-Ansatz mit Fokus auf Wien, Kooperation mit Wirtschaftskammer-Initiativen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Positioning -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Strategische Positionierung</h2>
+                <p class="section__subtitle">Was uns von anderen Anbietern unterscheidet</p>
+            </div>
+            <div class="grid grid--2">
+                <div class="card">
+                    <h4>Low-Code-First Ansatz</h4>
+                    <p>Wir setzen primär auf die Microsoft Power Platform als leistungsfähiges, flexibles und zukunftssicheres Low-Code-Ökosystem. Nahtlose Integration mit Microsoft 365, Dynamics 365 und Azure-Diensten.</p>
+                </div>
+                <div class="card">
+                    <h4>KMU-Spezialisierung</h4>
+                    <p>Unser gesamtes Angebot ist speziell auf die Bedürfnisse, Ressourcen und Herausforderungen von kleinen und mittelständischen Unternehmen zugeschnitten.</p>
+                </div>
+                <div class="card">
+                    <h4>Microsoft-Expertise</h4>
+                    <p>Als Microsoft-Partner mit MVP-Status nutzen wir unsere tiefe Vernetzung im Microsoft-Ökosystem für optimale Lizenzierungsmodelle und Best Practices.</p>
+                </div>
+                <div class="card">
+                    <h4>Skalierbare Digitalisierung</h4>
+                    <p>Unsere Lösungen wachsen mit dem Unternehmen mit – von einzelnen Automatisierungen bis hin zu unternehmensweiten Digitalisierungsstrategien.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--bg">
+        <div class="container text-center">
+            <h2 class="section__title">Lernen Sie uns persönlich kennen</h2>
+            <p class="section__subtitle">Vereinbaren Sie ein kostenloses Kennenlerngespräch mit Marcel Lehmann.</p>
+            <div class="d-flex justify-content-center gap-3" style="margin-top: 2rem;">
+                <a href="contact.html" class="btn btn--primary btn--lg">Kostenloses Gespräch</a>
+                <a href="mailto:marcel@kmupower.ch" class="btn btn--outline btn--lg">Direkt kontaktieren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>KMUpower</h3>
+                    <p>Ihr Digitalisierungspartner im DACH-Raum. Wir ermächtigen KMUs durch Microsoft Power Platform Expertise.</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="suite.html">KMU Power Suite</a></li>
+                        <li><a href="pricing.html">Preismodelle</a></li>
+                        <li><a href="partners.html">Partner werden</a></li>
+                        <li><a href="contact.html">Beratung</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                        <li>Datenschutz</li>
+                        <li>Impressum</li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li>marcel@kmupower.ch</li>
+                        <li>Zug, Schweiz</li>
+                        <li>DACH-Region Service</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 KMUpower. Alle Rechte vorbehalten. Microsoft MVP für Business Applications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>"""
+
+# Speichere about.html
+with open('about.html', 'w', encoding='utf-8') as f:
+    f.write(about_html)
+
+print("✅ about.html erstellt")
+print("Features: Marcel Lehmann MVP-Status, Mission/Vision, Kernwerte, DACH-Fokus")
